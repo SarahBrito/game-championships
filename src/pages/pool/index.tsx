@@ -9,12 +9,12 @@ import NavBar from '../../components/navbar';
 
 import { ParticipantPrediction } from '../../types/participant';
 
-// const storedValue = localStorage.getItem('participants');
-// const fromLocalStorage = storedValue ? JSON.parse(storedValue): null
+const storedValue = localStorage.getItem('participants');
+const fromLocalStorage = storedValue ? JSON.parse(storedValue): null
 
 const Pool = () => {
 
-  const [participants, setParticipants] = useState<ParticipantPrediction[]>([]);
+  const [participants, setParticipants] = useState<ParticipantPrediction[]>(fromLocalStorage || []);
   const [selectedCompetition, setSelectedCompetition] = useState('');
   const [selectedTeam, setSelectedTeam] = useState('');
   const [team, setTeam] = useState<string[]>([]);
@@ -22,9 +22,9 @@ const Pool = () => {
  
   const [participantName, setParticipantName] = useState('');
 
-  // useEffect(()=>{
-  //   localStorage.setItem("participants", JSON.stringify(participants))
-  // },[participants])
+  useEffect(()=>{
+    localStorage.setItem("participants", JSON.stringify(participants))
+  },[participants])
 
   useEffect(() => {
     const teamParts = selectedTeam.split(/,/);
