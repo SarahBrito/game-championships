@@ -14,7 +14,7 @@ const SelectedMatch: React.FC<SelectedMatchProps> = ({ selectedTeam, onChange, c
       try {
         const response = await axios.get(`https://api.football-data.org/v4/competitions/${competitionId}/matches`, {
           headers: {
-            'X-Auth-Token': '877483580c33490eb7d65f8c0cb96c8d',
+            'X-Auth-Token': `${import.meta.env.VITE_API_TOKEN}`,
           },
         });
 

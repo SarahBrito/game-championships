@@ -1,4 +1,3 @@
-import {API_KEY} from '../../config'
 
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -22,11 +21,10 @@ const Championship = () => {
 
   useEffect(() => {
 
-  
 
     axios.get('https://api.football-data.org/v4/competitions/', {
       headers: {
-        'X-Auth-Token': `${API_KEY}`,
+        'X-Auth-Token': `${import.meta.env.VITE_API_TOKEN}`,
       },
     })
       .then((response) => {

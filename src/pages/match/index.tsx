@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { format } from 'date-fns';
 import { MatchData } from '../../types/match';
-import {API_KEY} from '../../config'
+
 
 import './styles.scss'
 import NavBar from '../../components/navbar';
@@ -21,7 +21,7 @@ function ChampionshipMatches() {
       try {
         const response = await axios.get(`https://api.football-data.org/v4/competitions/${id}/matches`, {
           headers: {
-            'X-Auth-Token': `${API_KEY}`,
+            'X-Auth-Token': `${import.meta.env.VITE_API_TOKEN}`,
           },
         });
 
