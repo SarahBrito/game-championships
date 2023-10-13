@@ -1,0 +1,32 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+select {
+  outline: none;
+}
+
+.container {
+  max-width: 1440px;
+  height: 100%;
+  border: 1px solid #e7e6e6;
+  margin: 0 auto;
+}

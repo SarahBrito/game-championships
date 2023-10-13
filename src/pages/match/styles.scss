@@ -1,0 +1,134 @@
+
+.matchs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  
+  .home-page {
+    border: none;
+    width: 100px;
+    background: #3d3c3c;
+    color: #fff;
+
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
+
+
+.matchs-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.matchs-filter {
+ 
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  margin: 40px 0;
+
+  button {
+    width: 150px;
+    height: 45px;
+    background: #3d3c3c;
+    color: #bdbaba;
+    border-radius: 5px;
+    font-size: 16px;    
+    padding: 12px;
+  }
+
+  .selected {
+    border-bottom: 4px solid #7668d2;
+  }
+}
+
+.matchs-card {
+
+  display: grid;
+  align-items: center;
+  grid-template-areas: 
+  "img homeTeam awayTeam"
+  "img homeTeam awayTeam"
+  "date date date"
+  ;
+  padding: 5px;
+  gap: 16px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 5px;
+  width: 400px;
+
+  img {
+    grid-area: 'img';
+    width: 100px;
+  }
+
+  .info-homeTeam, .info-awayTeam {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .info-homeTeam {
+    grid-area: homeTeam;
+  }
+  .info-awayTeam {
+    grid-area: awayTeam;
+  }
+  .match-date {
+    background: #3d3c3c;
+    width: 286px;
+    color: #bdbaba;
+    padding: 6px;
+    margin: 0 auto;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    grid-area: date;
+
+    a {
+      background: #3d3c3c;
+      margin-left: 5px;
+      border-left: 1px solid #fff;
+      padding-left: 5px;
+      color: #7668d2;
+
+      &:hover {
+        color: #34d195;
+      }
+    }
+
+    
+
+    span {
+      margin-left: 5px;
+      border-left: 1px solid #fff;
+      padding-left: 5px;
+      color: #7668d2;
+    }
+  }
+
+  .name-team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .img-team {
+    width: 25px;
+    height: 25px;
+  }
+
+  .score-team{
+    text-align: center;
+    width: 50px;
+    background: #e8e6e6;
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
+}
